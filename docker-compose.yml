@@ -1,8 +1,11 @@
 version: '3.7'
 
 services:
-  mfa-cli:
-    image: mfa-cli:0.1
-    build: .
+  zbar:
+    image: zbar:0.23-alpine
+    build: ./zbar/
     volumes:
       - './images:/images:ro'
+  oathtool:
+    image: oathtool:2.6.2-alpine
+    build: ./oathtool/
