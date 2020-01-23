@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  mfa-cli:
+    image: mfa-cli:0.1
+    build: .
+    volumes:
+      - './images:/images:ro'
